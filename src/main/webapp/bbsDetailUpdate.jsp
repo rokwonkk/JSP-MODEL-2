@@ -1,6 +1,4 @@
 <%@ page import="dto.MemberDto" %>
-<%@ page import="dao.BbsDao" %>
-<%@ page import="dto.BbsDto" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     MemberDto login = (MemberDto) session.getAttribute("login");

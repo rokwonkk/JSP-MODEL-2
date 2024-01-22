@@ -108,4 +108,60 @@
 <%
         }
     }
+
+    String calWrite = (String) request.getAttribute("calWrite");
+    if (calWrite != null && !calWrite.isEmpty()) {
+        if (calWrite.equals("CAL_WRITE_OK")) {
+%>
+<script type="text/javascript">
+    alert("성공적으로 추가되었습니다");
+    location.href = "calendar?param=calendarList";
+</script>
+<%
+} else {
+%>
+<script type="text/javascript">
+    alert("추가되지 않았습니다");
+    location.href = "calendar?param=calendarList";
+</script>
+<%
+        }
+    }
+    String calUpdate = (String) request.getAttribute("calUpdate");
+    if (calUpdate != null && !calUpdate.equals("")) {
+        if (calUpdate.equals("CAL_UPDATE_OK")) {
+%>
+<script type="text/javascript">
+    alert("성공적으로 수정되었습니다");
+    location.href = "calendar?param=calendarList";
+</script>
+<%
+} else {
+%>
+<script type="text/javascript">
+    alert("수정되지 않았습니다");
+    location.href = "calendar?param=calendarList";
+</script>
+<%
+        }
+    }
+
+    String calDelete = (String) request.getAttribute("calDelete");
+    if (calDelete != null && !calDelete.equals("")) {
+        if (calDelete.equals("CAL_DELETE_OK")) {
+%>
+<script type="text/javascript">
+    alert("성공적으로 삭제되었습니다");
+    location.href = "calendar?param=calendarList";
+</script>
+<%
+} else {
+%>
+<script type="text/javascript">
+    alert("삭제되지 않았습니다");
+    location.href = "calendar?param=calendarList";
+</script>
+<%
+        }
+    }
 %>
