@@ -158,7 +158,7 @@
 } else {
 %>
 <script type="text/javascript">
-    alert("삭제되지 않았습니다..");
+    alert("삭제되지 않았습니다");
     location.href = "calendar?param=calendarList";
 </script>
 <%
